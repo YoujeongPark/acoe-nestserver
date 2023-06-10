@@ -5,6 +5,7 @@ import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import configuration from './config/configuration';
 import { join } from 'path';
+import { CatsModule } from './cats/cats.module';
 @Module({
   imports: [
     ConfigModule.forRoot({   // configuration 설정을 coifg module 불러 올 때 로드한다
@@ -26,7 +27,7 @@ import { join } from 'path';
       }),
     }),
     UsersModule,
-    // OrderModule,
+    CatsModule,
   ],
   controllers: [],
   providers: [],
